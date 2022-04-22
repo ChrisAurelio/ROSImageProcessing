@@ -1,0 +1,20 @@
+<launch>
+
+  <group ns="imageprocessing">
+  
+    <node pkg="imageprocessing" name="ImageProcessing" type="ImageProcessing.py"/>
+
+    <node pkg="imageprocessing" name="LaneDetection" type="LaneDetection.py"/>
+    
+    <node pkg="rqt_image_view" type="rqt_image_view" name="image_view_edges" args="/image_edges"/>
+
+    <node pkg="rqt_image_view" type="rqt_image_view" name="image_view_white" args="/image_lines_white"/>
+    
+    <node pkg="rqt_image_view" type="rqt_image_view" name="image_view_yellow" args="/image_lines_yellow"/>
+    
+  </group>
+  
+  <node pkg="image_processing_hw" name="image_pub_all" type="image_pub_all.py"/>
+
+</launch>
+

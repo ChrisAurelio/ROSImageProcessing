@@ -1,0 +1,18 @@
+<launch>
+
+  <group ns="imageprocessing">
+
+    <node pkg="imageprocessing" name="ImageProcessing" type="ImageProcessing.py"/>
+    
+    <node pkg="rqt_image_view" type="rqt_image_view" name="image_view_cropped" args="/image_cropped"/>
+
+    <node pkg="rqt_image_view" type="rqt_image_view" name="image_view_white" args="/image_white"/>
+
+    <node pkg="rqt_image_view" type="rqt_image_view" name="image_view_yellow" args="/image_yellow"/>
+    
+  </group>
+  
+  <node pkg="image_processing_hw" name="image_pub_all" type="image_pub_all.py"/>
+
+</launch>
+
